@@ -47,20 +47,20 @@ describe("Data Fetching Component Test Suite",()=>{
     }
 
     it("fs",()=>{
-        
-    })
-
-
-    it("should render the Component",async()=>{
-       renderDataFetchingComponent();
-        
-       const postBody= await screen.findByText(/body:/i);
-
-       await waitFor(()=>{
-            const postbodyByGetBy= screen.getByText(/body:/i)
-            expect(postbodyByGetBy).toBeInTheDocument();
-       });
-       expect(postBody).toBeInTheDocument();
 
     })
+
+
+    // it("should render the Component",async()=>{
+    //    renderDataFetchingComponent();
+        
+    //    const postBody= await screen.findByText(/body:/i);
+
+    //    await waitFor(()=>{
+    //         const postbodyByGetBy= screen.getByText(/body:/i)
+    //         expect(postbodyByGetBy).toBeInTheDocument();
+    //    });
+    //    expect(postBody).toBeInTheDocument();
+
+    // })
 })

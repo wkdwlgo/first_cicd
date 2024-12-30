@@ -1,11 +1,33 @@
+# yml key:value로 구성, 콤마로 나뉜다. / 띄어쓰기와 들여쓰기가 상당히 중요함(에러로 인식 가능)
+# workflow
+
+#name: 워크플로우의 이름
 name: First workflow
+
+# on: 워크플로우가 트리거 될 이벤트
+# 깃허브 워크플로우 문서: https://docs.github.com/ko/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows
+# workflow_dispatch: 수동으로 트리거 
 on: workflow_dispatch
+
+# jobs: job의 정의
 jobs:
+
+  #job.id job의 이름 임의의 이름
   first-jobs:
+
+    # job이 실행 될 환경
+    # runner
     runs-on: ubuntu-latest
+
+    #steps: job 일련의 과정
     steps:
+
+        #- name(띄어쓰기 지켜라.): step의 이름 
       - name: Print Greeting
+
+        #run: cli 명령어
         run: echo "Hello World!"
 
       - name: Print Goodbye
         run: echo " Done ! Bye"
+
