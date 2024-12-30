@@ -15,7 +15,8 @@ on:
     workflow_dispatch:
         branches:
             - dev
-
+            - "feat/**"
+            
 jobs: 
 
     #1. 테스트
@@ -36,6 +37,7 @@ jobs:
     #2. 빌드 job
     build:
         runs-on: ubuntu-latest
+        needs: test
 
         steps:
             - name: Get Codes

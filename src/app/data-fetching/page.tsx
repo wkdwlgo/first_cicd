@@ -14,7 +14,7 @@ export const DataFetchingComponent: NextPage=()=>{
     }
     return (
         <div>
-            <h1>Data Fetching</h1>
+            {/* <h1>Data Fetching</h1>
             <h2 className="mt-40 font-bold text-2xl">Posts</h2>
             <ul>
                 {
@@ -34,7 +34,7 @@ export const DataFetchingComponent: NextPage=()=>{
                         </li>
                     ))
                 }
-            </ul>
+            </ul> */}
         </div>
     )
 }
