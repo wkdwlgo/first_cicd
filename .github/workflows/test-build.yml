@@ -14,6 +14,6 @@ jobs:
         steps: 
             # 코드를 가져옴
             - name: Get Codes
-                run: actions/checkout@v4 
+              run: actions/checkout@v4 
     #2. 빌드
 
