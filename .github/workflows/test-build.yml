@@ -5,7 +5,17 @@
 name: Run Test And Build
 # push, workflow_dispatch(manually trigger) 
 # 이벤트 대해서만 트리거 됌
-on: [push, workflow_dispatch]
+on: 
+    # Trigger Event
+    push: 
+        # Event Filtering
+        branches:
+            - dev 
+
+    workflow_dispatch:
+        branches:
+            - dev
+
 jobs: 
 
     #1. 테스트
@@ -26,7 +36,6 @@ jobs:
     #2. 빌드 job
     build:
         runs-on: ubuntu-latest
-        needs: test
 
         steps:
             - name: Get Codes
